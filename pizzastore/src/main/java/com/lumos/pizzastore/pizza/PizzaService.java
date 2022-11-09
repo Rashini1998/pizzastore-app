@@ -1,6 +1,7 @@
 package com.lumos.pizzastore.pizza;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
 
@@ -33,5 +34,19 @@ public class PizzaService {
 
     public void deletePizza(Integer id) {
         pizzaRepository.deleteById(id);
+    }
+
+    public ResponseEntity<Pizza> updatePizza(Integer id, Pizza pizza) throws Exception {
+        Pizza update = pizzaRepository.findById(id).orElseThrow(()-> new Exception("Doctor not exists with this id: "+id));
+
+        update.setPizzaId(pizza.getPizzaId());
+        update.setPizzaName(pizza.getPizzaName());
+        update.setPizzaType(pizza.getPizzaType());
+        update.setSize(pizza.getSize());
+        update.setPrice(pizza.getPrice());
+
+
+        pizzaRepository.save(update);
+        return ResponseEntity.ok(update);
     }
 }

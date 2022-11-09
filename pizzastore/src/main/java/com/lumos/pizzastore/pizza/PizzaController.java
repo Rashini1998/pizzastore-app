@@ -1,6 +1,7 @@
 package com.lumos.pizzastore.pizza;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -34,8 +35,8 @@ public class PizzaController {
         pizzaService.deletePizza(id);
     }
 
-//    @PutMapping("/updatepizza/{id}")
-//    public ResponseEntity<Pizza> updateUser(@PathVariable int id, @RequestBody Pizza doctorList){
-//        return pizzaService.updatePizza(id);
-//    }
+    @PutMapping("/updatepizza/{id}")
+    public ResponseEntity<Pizza> updatepizza(@PathVariable int id, @RequestBody Pizza pizza) throws Exception {
+        return pizzaService.updatePizza(id,pizza);
+    }
 }

@@ -24,7 +24,8 @@ public class OrderController {
         return orderRepository.findAll();
     }
 
+
     @DeleteMapping("/order/{id}")
-    public void delete(@PathVariable String id){orderService.deleteOrder(id);
+    public void delete(@PathVariable Integer id){orderService.deleteOrder(id);
     }
 }

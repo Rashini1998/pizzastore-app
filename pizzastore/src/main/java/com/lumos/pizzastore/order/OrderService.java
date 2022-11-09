@@ -24,7 +24,7 @@ public class OrderService {
     }
 
     //delete an order
-    public void deleteOrder(String id){
-        orderRepository.deleteById(String.valueOf(id));
+    public void deleteOrder(Integer id){
+        orderRepository.deleteById(id);
     }
 }
