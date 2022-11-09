@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "e63e3615-5b1f-40fd-9a90-1892b889677a",
-		"name": "PIzzaMart",
+		"name": "PizzaStore",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "19501531"
 	},
@@ -129,6 +129,36 @@
 							"path": [
 								"pizza",
 								"getpizza",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Pizza",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pizzaId\":2,\r\n    \"pizzaName\": \"zzz\",\r\n    \"pizzaType\":\"123123\",\r\n    \"size\":\"large\",\r\n    \"price\":1000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pizza/updatepizza/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pizza",
+								"updatepizza",
 								"2"
 							]
 						}
