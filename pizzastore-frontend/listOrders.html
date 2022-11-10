@@ -1,10 +1,80 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns:th="">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">-->
+<!--    <link rel="stylesheet" href="listOrders.css">-->
+<!--    <script type="text/javascript" src="index.js"></script>-->
+<!--    <title>Pizza Mart-Order List</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<nav class="navbar navbar-expand-lg navbar-dark bg-primary">-->
+<!--    <a class="navbar-brand" href="#">Pizza Mart</a>-->
+<!--    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--        <span class="navbar-toggler-icon"></span>-->
+<!--    </button>-->
+<!--    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">-->
+<!--        <div class="navbar-nav">-->
+<!--            <a class="nav-item nav-link active" href="">Home <span class="sr-only">(current)</span></a>-->
+<!--            <a class="nav-item nav-link" href="listOrders.html">Pizza</a>-->
+<!--            <a class="nav-item nav-link" href="order.html">Orders</a>-->
+<!--            <a class="nav-item nav-link disabled" href="#">Users</a>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</nav>-->
+
+<!--<h1 class="center">Manage Orders</h1>-->
+<!--<br>-->
+<!--<br>-->
+<!--<table>-->
+<!--    <tr>-->
+<!--        <th style="width: 200px">Order Id</th>-->
+<!--        <th style="width: 200px">Pizza Id</th>-->
+<!--        <th style="width: 200px">Order Date</th>-->
+<!--        <th style="width: 200px">Quantity</th>-->
+<!--        <th style="width: 200px">Price</th>-->
+<!--    </tr>-->
+
+<!--</table>-->
+<!--<div id="order-list">-->
+<!--    <tr class="order-data">-->
+<!--        <td>${order.orderId}</td>-->
+<!--        <td>-->
+<!--            ${order.pizzaId}-->
+<!--        </td>-->
+<!--        <td>-->
+<!--            ${order.orderDate}-->
+<!--        </td>-->
+<!--        <td>-->
+<!--            ${order.quantity}-->
+<!--        </td>-->
+<!--        <td>-->
+<!--            ${order.price}-->
+<!--        </td>-->
+<!--        <td>-->
+<!--            <button onclick="deleteorder(order.pizzaId)">Delete</button>-->
+<!--        </td>-->
+<!--    </tr>-->
+<!--</div>-->
+
+
+<!--<script src="order.js"></script>-->
+<!--</body>-->
+<!--</html>-->
+
+
+
+
 <!DOCTYPE html>
-<html lang="en" xmlns:th="">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="listOrders.css">
-    <title>Pizza Mart-Order List</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Pizza Mart</title>
+    <script src="order.js">
+
+    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -14,42 +84,69 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="listOrders.html">Pizza</a>
-            <a class="nav-item nav-link" href="order.html">Orders</a>
-            <a class="nav-item nav-link disabled" href="#">Users</a>
+            <a class="nav-item nav-link active" href="home.html">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="listPizza.html">Pizza</a>
+            <a class="nav-item nav-link"href="listUser.html">Users</a>
+            <a class="nav-item nav-link" href="listOrders.html">Orders</a>
+            <div style="margin-left: 1000px">
+                <span>
+                    <a class="nav-item nav-link" href="registerUser.html">Register</a>
+                <a class="nav-item nav-link" href="listPizzaCustomer.html">Pizza</a>
+                </span>
+
+            </div>
+
         </div>
     </div>
 </nav>
+<br><br>
+<h1 style="text-align: center">All Orders</h1>
 
-<h1 class="center">Manage Orders</h1>
-<br>
-<br>
-<tr>
-    <th >Order Id</th>
-    <th >Pizza Id</th>
-    <th >Order Date</th>
-    <th >Quantity</th>
-    <th >Price</th>
-</tr>
-<div id="order-list">
+<br><br>
 
-    <tr class="order-data">
-        <td>${order.orderId}</td>
-        <td>
-            ${order.pizzaId}
-        </td>
-        <td>
-            ${order.quantity}
-        </td>
-        <td>
-            ${order.price}
-        </td>
-    </tr>
+<div style="margin-left: 200px; margin-right: 200px;">
+
+    <div class="pizza-list">
+        <table class="table table-hover">
+
+            <tr>
+                <th style="width: 200px">Order Id</th>
+                <th style="width: 200px">Pizza Id</th>
+                <th style="width: 200px">Order Date</th>
+                <th style="width: 200px">Quantity</th>
+                <th style="width: 200px">Price</th>
+            </tr>
+
+
+        </table>
+<!--        <div id="user-list" style="column-width: 1500px">-->
+
+<!--        </div>-->
+        <div id="order-list" style="column-width: 1500px">
+<!--            <tr class="order-data">-->
+<!--                <td>${order.orderId}</td>-->
+<!--                <td>-->
+<!--                    ${order.pizzaId}-->
+<!--                </td>-->
+<!--                <td>-->
+<!--                    ${order.orderDate}-->
+<!--                </td>-->
+<!--                <td>-->
+<!--                    ${order.quantity}-->
+<!--                </td>-->
+<!--                <td>-->
+<!--                    ${order.price}-->
+<!--                </td>-->
+<!--                <td>-->
+<!--                    <button onclick="deleteorder(order.pizzaId)">Delete</button>-->
+<!--                </td>-->
+<!--            </tr>-->
+        </div>
+    </div>
+
 </div>
 
 
 
-<script src="listOrders.js"></script>
 </body>
 </html>

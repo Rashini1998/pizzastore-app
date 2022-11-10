@@ -1,0 +1,128 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--</body>-->
+<!--</html><!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="utf-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+<!--    <title>Pizza Mart</title>-->
+<!--    <link rel="stylesheet" src="styles.css"></link>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--<br><br>-->
+<!--<h1 style="text-align: center">All Pizza</h1>-->
+
+<!--<br><br>-->
+<!--<div>-->
+<!--&lt;!&ndash;    <ul>&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        <button onclick="onclick1()"><a href="addPizza.html">Add Pizza</a></button>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        <button onclick="onclick3()">Orders</button>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        <button onclick="onclick4()">Users</button>&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;    </ul>&ndash;&gt;-->
+<!--</div>-->
+
+<!--<div class="pizza-list">-->
+<!--    <table class="table table-hover">-->
+
+<!--        <tr>-->
+<!--            <th style = "width: 150px" >Pizza Name</th>-->
+<!--            <th style = "width: 150px">Pizza Type</th>-->
+<!--            <th style = "width: 150px">Size</th>-->
+<!--            <th style = "width: 150px">Price</th>-->
+<!--            <th style = "width: 150px">Action</th>-->
+<!--        </tr>-->
+
+
+
+
+<!--    </table>-->
+<!--    <div id="pizza-list">-->
+
+<!--    </div>-->
+<!--</div>-->
+
+<!--<script src="Order.js">-->
+
+<!--</script>-->
+
+<!--</body>-->
+<!--</html>-->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Pizza Mart</title>
+    <script src="Order.js">
+
+    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Pizza Mart</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="home.html">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="listPizza.html">Pizza</a>
+            <a class="nav-item nav-link"href="listUser.html">Users</a>
+            <a class="nav-item nav-link" href="listOrders.html">Orders</a>
+            <div style="margin-left: 1000px">
+                <span>
+                    <a class="nav-item nav-link" href="registerUser.html">Register</a>
+                <a class="nav-item nav-link" href="listPizzaCustomer.html">Pizza</a>
+                </span>
+
+            </div>
+
+        </div>
+    </div>
+</nav>
+<br><br>
+<h1 style="text-align: center">All Pizza</h1>
+
+<br><br>
+<button type="submit" class="btn btn-primary" style="margin-left: 200px;" onclick="selectPizza(${pizza.pizzaId}) "><a href="addPizza.html" style="color: white">Add Pizza</a></button>
+<br><br>
+<div style="margin-left: 200px; margin-right: 200px;">
+
+    <div class="pizza-list">
+        <table class="table table-hover">
+
+            <tr>
+                <th style = "width: 150px" >Pizza Name</th>
+                <th style = "width: 150px">Pizza Type</th>
+                <th style = "width: 150px">Size</th>
+                <th style = "width: 150px">Price</th>
+                <th style = "width: 150px">Action</th>
+            </tr>
+
+
+        </table>
+        <div id="pizza-list" style="column-width: 1500px">
+
+        </div>
+    </div>
+
+</div>
+
+
+
+</body>
+</html>

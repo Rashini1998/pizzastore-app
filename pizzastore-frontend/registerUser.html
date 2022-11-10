@@ -1,0 +1,96 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Register</title>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--<button onclick="Register()">click</button>-->
+<!--<input id="fname" placeholder="First Name">-->
+<!--<input id="lname" placeholder="Last Name">-->
+<!--<input id="cno" placeholder="Contact Number">-->
+<!--<input id="email" placeholder="Email">-->
+<!--<script src="index.js"></script>-->
+<!--</body>-->
+<!--</html>-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Pizza Mart</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--    <script type="text/javascript" src="../static/index.js"></script>-->
+    <script src="index.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Pizza Mart</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="home.html">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="listPizza.html">Pizza</a>
+            <a class="nav-item nav-link"href="listUser.html">Users</a>
+            <a class="nav-item nav-link" href="listOrders.html">Orders</a>
+            <div style="margin-left: 1000px">
+                <span>
+                    <a class="nav-item nav-link" href="registerUser.html">Register</a>
+                <a class="nav-item nav-link" href="listPizzaCustomer.html">Pizza</a>
+                </span>
+
+            </div>
+
+        </div>
+    </div>
+</nav>
+<br><br>
+<h1 style="text-align: center">Register</h1>
+<div style="margin-left: 500px; margin-top: 70px">
+    <form>
+        <div class="form-group row">
+            <label for="fname" class="col-sm-2 col-form-label">First Name: </label>
+            <div class="col-sm-4">
+                <input id="fname" placeholder="First Name"  class="form-control">
+
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="lname" class="col-sm-2 col-form-label">Last Name:</label>
+            <div class="col-sm-4">
+                <input id="lname" placeholder="Last Name"  class="form-control">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="cno" class="col-sm-2 col-form-label">Contact Number:</label>
+            <div class="col-sm-4">
+                <input id="cno" placeholder="Contact Number"  class="form-control">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="email" class="col-sm-2 col-form-label">Email:</label>
+            <div class="col-sm-4">
+                <input id="email" placeholder="Email"  class="form-control">
+            </div>
+        </div>
+        <br>
+        <div class="form-group row">
+            <div class="col-sm-10 ">
+                <button type="submit" class="btn btn-primary" style="margin-left: 180px" onclick="Register()">Register</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
+</body>
+</html>

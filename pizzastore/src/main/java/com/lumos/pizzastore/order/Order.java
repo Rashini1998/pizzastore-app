@@ -1,5 +1,6 @@
 package com.lumos.pizzastore.order;
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
@@ -14,7 +15,7 @@ public class Order {
     private String pizzaId;
 
     @Column(name = "order_date")
-    private LocalDateTime orderDate;
+    private LocalDate orderDate;
 
     @Column(name = "quantity", nullable = false)
     private Integer quantity;
@@ -25,7 +26,7 @@ public class Order {
     public Order(){
     }
 
-    public Order(Integer orderId, String pizzaId, LocalDateTime orderDate, Integer quantity, Float price) {
+    public Order(Integer orderId, String pizzaId, LocalDate orderDate, Integer quantity, Float price) {
         this.orderId = orderId;
         this.pizzaId = pizzaId;
         this.orderDate = orderDate;
@@ -52,11 +53,11 @@ public class Order {
     }
 
 
-    public LocalDateTime getOrderDate() {
+    public LocalDate getOrderDate() {
         return orderDate;
     }
 
-    public void setOrderDate(LocalDateTime orderDate) {
+    public void setOrderDate(LocalDate orderDate) {
         this.orderDate = orderDate;
     }
 
